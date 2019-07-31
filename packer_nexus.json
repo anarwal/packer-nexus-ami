@@ -15,13 +15,13 @@
     "secret_key"                           : "{{user `aws_secret_key`}}",
     "region"                               : "{{user `aws_region`}}",
     "instance_type"                        : "t2.micro",
-    "ssh_username"                         : "ec2-user",
+    "ssh_username"                         : "centos",
     "associate_public_ip_address"          : "false",
     "source_ami"                           : "{{user `source_ami` }}",
     "run_tags"                             : { "Name": "packer_{{user `app_name` }}" },
     "tags": {
       "Name"      : "packer_nexus",
-      "OS Version": "Amazon Linux",
+      "OS Version": "Centos",
       "Tool"      : "Packer",
       "Author"    : "Abhimanyu Narwal"
     }
